@@ -1,0 +1,21 @@
+<div class="container">
+  <h2 class="text-center mb-4">Professional Skill</h2>
+  <div class="row">
+    <div class="col-md-6" *ngFor="let skill of professionalSkills;">
+      <div class="d-flex justify-content-between">
+        <span>{{ skill.name }}</span>
+        <span>{{ skill.percentage }}%</span>
+      </div>
+      
+      <div class="progress mt-2">
+        <div 
+          class="progress-bar" 
+          role="progressbar" 
+          [style.width.%]="skill.percentage" 
+          aria-valuemin="0" 
+          aria-valuemax="100">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
